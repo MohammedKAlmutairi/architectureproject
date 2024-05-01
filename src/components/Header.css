@@ -1,0 +1,35 @@
+header {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #2C3E50;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.header, .page-header {
+    background-color: #FFFFFF;
+    color: #34495e;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.header h1, .page-header h1, .website-title {
+    margin: 0;
+    padding: 0;
+    color: #34495e;
+}
+
+.page-header a:link, .page-header a:visited, .page-header a:hover, .page-header a:active {
+    text-decoration: none;
+    color: #FF7F50;
+    transition: color 0.3s ease;
+}
+
+.page-header a:hover {
+    color: #2C3E50;
+}

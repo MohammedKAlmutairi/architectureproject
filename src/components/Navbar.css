@@ -1,0 +1,82 @@
+.website-title {
+    margin-bottom: 0;
+}
+
+.page-header {
+    grid-row: 1/2;
+    background-color: #FFFFFF;
+    color: #34495e;
+    text-align: center;
+}
+
+.page-header a:link,
+.page-header a:visited,
+.page-header a:hover,
+.page-header a:active {
+    text-decoration: none;
+    color: #FF7F50;
+}
+
+.navigation-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 200px;
+    background: #f9f9f9;
+    padding: 20px 0;
+    margin: 0;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+.navigation-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+
+.nav-link {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #34495e;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #E1E1E1;
+    border-radius: 0;
+}
+
+.navigation-bar a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #34495e;
+    transition: background-color 0.3s ease;
+}
+
+.navigation-bar a:hover, .navigation-bar a:focus {
+    background-color: #E1E1E1;
+    border-radius: 0;
+    color: #34495e;
+}
+
+@media all and (max-width: 800px) {
+    .navigation-bar {
+        width: 100px;
+        padding: 10px 0;
+    }
+
+    .navigation-bar a {
+        padding: 10px;
+    }
+
+
+    .navigation-bar a {
+        font-size: 0.8em;
+    }
+}

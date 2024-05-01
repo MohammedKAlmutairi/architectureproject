@@ -1,0 +1,40 @@
+.simulation-stats {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin: 20px;
+    margin-left: 220px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    overflow: hidden;
+    max-width: calc(100% - 240px);
+    border: 1px solid #e0e0e0;
+}
+
+.stats-section {
+    margin-bottom: 20px;
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.stats-section h3 {
+    color: #2C3E50;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.stats-section p {
+    margin: 5px 0;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+}
+
+
+@media (max-width: 768px) {
+    .simulation-stats {
+        margin-left: 20px;
+        max-width: calc(100% - 40px);
+    }
+}
