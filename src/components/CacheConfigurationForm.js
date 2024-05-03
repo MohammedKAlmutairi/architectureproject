@@ -4,6 +4,8 @@ import './CacheConfigurationForm.css';
 import { FaDatabase, FaNetworkWired } from 'react-icons/fa';
 import { MdMemory, MdPolicy, MdTimer, MdAddCircleOutline } from 'react-icons/md';
 
+const BACKEND_URL = "http://127.0.0.1:5000";
+
 function CacheConfigurationForm({ onSubmit }) {
     const navigate = useNavigate();
     const [geoL1, setGeoL1] = useState({
@@ -26,15 +28,25 @@ function CacheConfigurationForm({ onSubmit }) {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        // sent data to backend
+        const payload = {
+            L1: geoL1,
+            L2: geoL2
+        }
         try {
-            const response = await fetch('/defaultSimulationData.json');
+            const response = await fetch(BACKEND_URL + '/api/simulate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            });
             const data = await response.json();
-            console.log("Fetched data:", data);  // Make sure this is the correct data
+            console.log("Server response:", data);  // Logging the response from the server
             onSubmit(data);
-            console.log("Data submitted for state update:", data);
             navigate('/SimulationStats');
         } catch (error) {
-            console.error('Failed to load simulation data:', error);
+            console.error('Failed to submit cache configuration:', error);
         }
     };
 

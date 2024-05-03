@@ -1,0 +1,35 @@
+ m2s --x86-sim detailed --x86-config /data/x86-config --mem- config /data/mem-config-1 /data/no_blocking
+[34m
+; Multi2Sim 5.0 - A Simulation Framework for CPU-GPU Heterogeneous Computing
+; Please use command 'm2s --help' for a list of command-line options.
+; Simulation alpha-numeric ID: 6fdqH
+
+[m/data/no_blocking: error while loading shared libraries: libstdc++.so.6: cannot open shared object file: No such file or directory
+[34m
+;
+; Simulation Statistics Summary
+;
+
+[ General ]
+RealTime = 5.17 [s]
+SimEnd = ContextsFinished
+SimTime = 92816.00 [ns]
+Frequency = 1000 [MHz]
+Cycles = 92817
+
+[34m[ x86 ]
+RealTime = 5.14 [s]
+Instructions = 49496
+InstructionsPerSecond = 9620
+SimTime = 92817.00 [ns]
+Frequency = 1000 [MHz]
+Cycles = 92817
+CyclesPerSecond = 18041
+FastForwardInstructions = 0
+CommittedInstructions = 21207
+CommittedInstructionsPerCycle = 0.2285
+CommittedMicroInstructions = 39264
+CommittedMicroInstructionsPerCycle = 0.423
+BranchPredictionAccuracy = 0.7974
+
+[m[m]0;

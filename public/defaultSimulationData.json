@@ -1,24 +1,50 @@
 {
-  "general": {
-    "RealTime": 238.48,
-    "SimEnd": "Signal",
-    "SimTime": 7461631.00,
-    "Frequency": 1000,
-    "Cycles": 7461632
+  "result1": {
+    "general": {
+      "RealTime": 238.48,
+      "SimEnd": "Signal",
+      "SimTime": 7461631.00,
+      "Frequency": 1000,
+      "Cycles": 7461632
+    },
+    "x86": {
+      "RealTime": 238.45,
+      "Instructions": 10965462,
+      "InstructionsPerSecond": 45986,
+      "SimTime": 7461632.00,
+      "Frequency": 1000,
+      "Cycles": 7461632,
+      "CyclesPerSecond": 31292,
+      "FastForwardInstructions": 0,
+      "CommittedInstructions": 9462030,
+      "CommittedInstructionsPerCycle": 1.268,
+      "CommittedMicroInstructions": 17419211,
+      "CommittedMicroInstructionsPerCycle": 2.335,
+      "BranchPredictionAccuracy": 0.9828
+    }
   },
-  "x86": {
-    "RealTime": 238.45,
-    "Instructions": 10965462,
-    "InstructionsPerSecond": 45986,
-    "SimTime": 7461632.00,
-    "Frequency": 1000,
-    "Cycles": 7461632,
-    "CyclesPerSecond": 31292,
-    "FastForwardInstructions": 0,
-    "CommittedInstructions": 9462030,
-    "CommittedInstructionsPerCycle": 1.268,
-    "CommittedMicroInstructions": 17419211,
-    "CommittedMicroInstructionsPerCycle": 2.335,
-    "BranchPredictionAccuracy": 0.9828
+  "result2": {
+    "general": {
+      "RealTime": 238.48,
+      "SimEnd": "Signal",
+      "SimTime": 7461631.00,
+      "Frequency": 1000,
+      "Cycles": 7461632
+    },
+    "x86": {
+      "RealTime": 238.45,
+      "Instructions": 10965462,
+      "InstructionsPerSecond": 45986,
+      "SimTime": 7461632.00,
+      "Frequency": 1000,
+      "Cycles": 7461632,
+      "CyclesPerSecond": 31292,
+      "FastForwardInstructions": 0,
+      "CommittedInstructions": 9462030,
+      "CommittedInstructionsPerCycle": 1.268,
+      "CommittedMicroInstructions": 17419211,
+      "CommittedMicroInstructionsPerCycle": 2.335,
+      "BranchPredictionAccuracy": 0.9828
+    }
   }
 }
