@@ -26,18 +26,25 @@ const Components = () => {
     const [simulationData, setSimulationData] = useState(null);
 
     return (
+
         <Router>
-            <Header />
-            <Navbar />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/CacheConfigurationForm" element={<FormHandler setSimulationData={setSimulationData} />} />
-                <Route path="/SimulationStats" element={<SimulationStats stats={simulationData} />} />
-                <Route path="/about" element={<About />} />
-            </Routes>
-            <Footer />
+            <Header/>
+            <Navbar/>
+            <div className="main-content">
+
+                <Routes>
+                    <Route path="/" element={<Home/>}/>
+                    <Route path="/CacheConfigurationForm"
+                           element={<FormHandler setSimulationData={setSimulationData}/>}/>
+                    <Route path="/SimulationStats" element={<SimulationStats stats={simulationData}/>}/>
+                    <Route path="/about" element={<About/>}/>
+                </Routes>
+                </div>
+                <Footer/>
         </Router>
-    );
+
+)
+    ;
 };
 
 export default Components;

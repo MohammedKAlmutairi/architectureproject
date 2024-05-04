@@ -7,7 +7,8 @@ import json
 import re
 
 app = Flask(__name__)
-CORS(app) 
+CORS(app)
+
 
 current_file_path = os.path.abspath(__file__)
 current_dir_path = os.path.dirname(current_file_path)

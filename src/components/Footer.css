@@ -1,18 +1,16 @@
-
 html, body {
   height: 100%;
   margin: 0;
 }
 
-
 .content-wrap {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  padding-bottom: 120px;
+  /* Set minimum height to fill the viewport */
+  min-height: calc(100vh - 140px); /* Subtract footer height and some extra padding */
+  padding-bottom: 160px; /* Keep some space below content for footer */
   box-sizing: border-box;
 }
-
 
 footer {
   position: fixed;
@@ -21,14 +19,8 @@ footer {
   width: 100%;
   background-color: #f9f9f9;
   color: #2C3E50;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
   padding: 20px 0;
   box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-  height: 120px;
   z-index: 1000;
 }
 
@@ -57,11 +49,14 @@ footer a:hover {
   color: #FF7F50;
 }
 
-
 @media all and (max-width: 800px) {
   footer {
     height: auto;
     padding: 20px 10px;
+  }
+  .content-wrap {
+    min-height: calc(100vh - 180px); /* Adjust based on the dynamic footer height */
+    padding-bottom: 180px; /* Similarly, increase the padding-bottom if needed */
   }
 
   footer ul {

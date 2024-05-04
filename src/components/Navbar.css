@@ -30,7 +30,12 @@
     padding: 20px 0;
     margin: 0;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    z-index: 1000;
 }
+
+
+
+
 .navigation-bar ul {
     list-style: none;
     padding: 0;

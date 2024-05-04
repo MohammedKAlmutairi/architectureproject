@@ -1,16 +1,35 @@
 .App {
   text-align: center;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
+.main-content {
+    margin-top: 0px;  /* Provide top space for any fixed header or spacing */
+    margin-left: 220px; /* Match the navigation bar width */
+    margin-bottom: 60px; /* Space for the footer, adjust as needed */
+    padding: 20px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+@media all and (max-width: 800px) {
+    .main-content {
+        margin-left: 100px; /* Adjust for the reduced navbar width on smaller screens */
+    }
 }
 
 .App-header {

@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './CacheConfigurationForm.css';
-import { FaDatabase, FaNetworkWired } from 'react-icons/fa';
+import { FaDatabase, FaNetworkWired, FaSpinner } from 'react-icons/fa';
 import { MdMemory, MdPolicy, MdTimer, MdAddCircleOutline } from 'react-icons/md';
 
 const BACKEND_URL = "http://127.0.0.1:5000";
 
 function CacheConfigurationForm({ onSubmit }) {
     const navigate = useNavigate();
+    const [loading, setLoading] = useState(false); // State to track loading
     const [geoL1, setGeoL1] = useState({
         sets: '64',
         assoc: '2',
@@ -28,6 +29,7 @@ function CacheConfigurationForm({ onSubmit }) {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        setLoading(true); // Start loading
         // sent data to backend
         const payload = {
             L1: geoL1,
@@ -42,9 +44,13 @@ function CacheConfigurationForm({ onSubmit }) {
                 body: JSON.stringify(payload)
             });
             const data = await response.json();
+            // TODO: Add a loading spinner while waiting for the response DONE!
             console.log("Server response:", data);  // Logging the response from the server
+            setLoading(false);
             onSubmit(data);
-            navigate('/SimulationStats');
+            // navigate('/SimulationStats');
+            navigate('/SimulationStats', { state: { results: data } });
+
         } catch (error) {
             console.error('Failed to submit cache configuration:', error);
         }
@@ -58,7 +64,11 @@ function CacheConfigurationForm({ onSubmit }) {
             [name]: value
         }));
     };
-
+if (loading) {
+        return <div className="form-container">
+            <FaSpinner className="spinner" />
+        </div>;
+    }
 return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>

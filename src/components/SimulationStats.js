@@ -1,15 +1,20 @@
-import React from 'react';
-import './SimulationStats.css';
+import { useLocation } from 'react-router-dom';
+import { FaRegClock, FaMicrochip, FaTachometerAlt, FaBurn } from 'react-icons/fa';
 
-function SimulationStats({ stats }) {
-    if (!stats || !stats.general || !stats.x86) {
+import './SimulationStats.css';
+function SimulationStats() {
+    const location = useLocation();
+    const results = location.state?.results;
+    if (!results || (!results['result1'] && !results['result2'])) {
+        console.log("Data for result1 or result2 is undefined, showing fallback UI.");
         return <div className="simulation-stats">No simulation data available. Please submit configuration first.</div>;
     }
 
-    return (
-        <div className="simulation-stats">
-            <h2>Simulation Statistics Summary</h2>
-            <div className="stats-section">
+
+        const renderStats = (stats, title) => (
+        <div className="stats-section">
+            <h2>{title}</h2>
+            <div className="stats-subsection">
                 <h3>General</h3>
                 <p>Real Time: {stats.general.RealTime} [s]</p>
                 <p>Sim End: {stats.general.SimEnd}</p>
@@ -17,7 +22,7 @@ function SimulationStats({ stats }) {
                 <p>Frequency: {stats.general.Frequency} [MHz]</p>
                 <p>Cycles: {stats.general.Cycles}</p>
             </div>
-            <div className="stats-section">
+            <div className="stats-subsection">
                 <h3>x86</h3>
                 <p>Real Time: {stats.x86.RealTime} [s]</p>
                 <p>Instructions: {stats.x86.Instructions}</p>
@@ -35,6 +40,14 @@ function SimulationStats({ stats }) {
             </div>
         </div>
     );
+
+    return (
+        <div className="simulation-stats">
+            {results.result1 && renderStats(results.result1, "Simulation Statistics Summary 1")}
+            {results.result2 && renderStats(results.result2, "Simulation Statistics Summary 2")}
+        </div>
+    );
+
 }
 
 export default SimulationStats;
