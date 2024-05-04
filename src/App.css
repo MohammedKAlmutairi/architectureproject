@@ -14,9 +14,9 @@ html, body {
 }
 
 .main-content {
-    margin-top: 0px;  /* Provide top space for any fixed header or spacing */
-    margin-left: 220px; /* Match the navigation bar width */
-    margin-bottom: 60px; /* Space for the footer, adjust as needed */
+    margin-top: 0px;
+    margin-left: 220px;
+    margin-bottom: 60px;
     padding: 20px;
 }
 
@@ -28,7 +28,7 @@ html, body {
 
 @media all and (max-width: 800px) {
     .main-content {
-        margin-left: 100px; /* Adjust for the reduced navbar width on smaller screens */
+        margin-left: 100px;
     }
 }
 

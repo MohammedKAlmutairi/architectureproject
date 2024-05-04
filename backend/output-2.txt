@@ -2,7 +2,7 @@
 [34m
 ; Multi2Sim 5.0 - A Simulation Framework for CPU-GPU Heterogeneous Computing
 ; Please use command 'm2s --help' for a list of command-line options.
-; Simulation alpha-numeric ID: DgeCR
+; Simulation alpha-numeric ID: N8Wh3
 
 [m/data/no_blocking: error while loading shared libraries: libstdc++.so.6: cannot open shared object file: No such file or directory
 [34m
@@ -11,20 +11,20 @@
 ;
 
 [ General ]
-RealTime = 2.47 [s]
+RealTime = 3.30 [s]
 SimEnd = ContextsFinished
 SimTime = 132987.00 [ns]
 Frequency = 1000 [MHz]
 Cycles = 132988
 
 [34m[ x86 ]
-RealTime = 2.42 [s]
+RealTime = 3.25 [s]
 Instructions = 53978
-InstructionsPerSecond = 22277
+InstructionsPerSecond = 16589
 SimTime = 132988.00 [ns]
 Frequency = 1000 [MHz]
 Cycles = 132988
-CyclesPerSecond = 54885
+CyclesPerSecond = 40870
 FastForwardInstructions = 0
 CommittedInstructions = 21209
 CommittedInstructionsPerCycle = 0.1595

@@ -8,7 +8,7 @@ const BACKEND_URL = "http://127.0.0.1:5000";
 
 function CacheConfigurationForm({ onSubmit }) {
     const navigate = useNavigate();
-    const [loading, setLoading] = useState(false); // State to track loading
+    const [loading, setLoading] = useState(false);
     const [geoL1, setGeoL1] = useState({
         sets: '64',
         assoc: '2',

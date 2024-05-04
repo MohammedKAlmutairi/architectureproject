@@ -1,12 +1,12 @@
 .simulation-stats {
     padding: 20px;
-    background-color: #f9f9f9; /* Matches form-container */
+    background-color: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Consistent with form-container */
-    margin: auto; /* Centering the container */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 1px solid #ccc; /* Consistency with form-container */
-    max-width: 1200px; /* Adjusted for wider content */
+    border: 1px solid #ccc;
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -15,17 +15,17 @@
 .stats-section svg {
     vertical-align: middle;
     margin-right: 5px;
-    color: #2C3E50; /* Adjust color to match your design */
+    color: #2C3E50;
 }
 
 .stats-section {
-    flex: 1 1 45%; /* Flex grow, flex shrink, flex basis */
+    flex: 1 1 45%;
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    min-width: 300px; /* Ensuring minimum width for readability */
-    max-width: 48%; /* Ensures two columns in wider views */
+    min-width: 300px;
+    max-width: 48%;
 }
 
 .stats-section h2, .stats-section h3 {
@@ -53,11 +53,11 @@
 
 @media (max-width: 768px) {
     .simulation-stats {
-        flex-direction: column; /* Stack sections vertically on small screens */
+        flex-direction: column;
         max-width: calc(100% - 40px);
     }
     .stats-section {
-        flex: 1 1 100%; /* Takes full width on small screens */
-        max-width: 100%; /* Use full width for better readability */
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 }

@@ -6,9 +6,8 @@ html, body {
 .content-wrap {
   display: flex;
   flex-direction: column;
-  /* Set minimum height to fill the viewport */
-  min-height: calc(100vh - 140px); /* Subtract footer height and some extra padding */
-  padding-bottom: 160px; /* Keep some space below content for footer */
+  min-height: calc(100vh - 140px);
+  padding-bottom: 160px;
   box-sizing: border-box;
 }
 
@@ -55,8 +54,8 @@ footer a:hover {
     padding: 20px 10px;
   }
   .content-wrap {
-    min-height: calc(100vh - 180px); /* Adjust based on the dynamic footer height */
-    padding-bottom: 180px; /* Similarly, increase the padding-bottom if needed */
+    min-height: calc(100vh - 180px);
+    padding-bottom: 180px;
   }
 
   footer ul {

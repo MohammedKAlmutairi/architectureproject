@@ -14,8 +14,6 @@ code {
 
 
 .app-container {
-  /* Set minimum height to fill the viewport */
   min-height: 100vh;
-  /* Add overflow-y to enable scrolling if content exceeds viewport height */
   overflow-y: auto;
 }

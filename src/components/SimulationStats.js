@@ -1,5 +1,4 @@
 import { useLocation } from 'react-router-dom';
-import { FaRegClock, FaMicrochip, FaTachometerAlt, FaBurn } from 'react-icons/fa';
 
 import './SimulationStats.css';
 function SimulationStats() {

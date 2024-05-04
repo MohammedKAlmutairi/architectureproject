@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
@@ -9,14 +9,14 @@ import CacheConfigurationForm from "./components/CacheConfigurationForm";
 import About from "./components/About";
 import SimulationStats from "./components/SimulationStats";
 
-// FormHandler component, now taking setSimulationData as a prop
+
 const FormHandler = ({ setSimulationData }) => {
     const navigate = useNavigate();
 
     const handleConfigurationSubmit = (config) => {
         console.log("Received configuration data:", config);
         setSimulationData(config);
-        navigate('/SimulationStats'); // Navigate after setting the state
+        navigate('/SimulationStats');
     };
 
     return <CacheConfigurationForm onSubmit={handleConfigurationSubmit} />;
